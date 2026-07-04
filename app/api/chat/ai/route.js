@@ -54,6 +54,6 @@ export async function POST(req){
 
         return NextResponse.json({success: true, data: message})
     } catch (error) {
-        return NextResponse.json({ success: false, error: error.message });
+        console.error("AI Route Error:", error); return NextResponse.json({ success: false, error: error.message });
     }
 }
